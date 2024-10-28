@@ -1,0 +1,61 @@
+1)React is a Javascript Library
+2)React is hosted on the CDN Link(Content Delivery Network) - while basic application setup 
+3)Cross Origin - A mechanism which allows web application to access the resources from the different domains
+4)For importing the react into application , need to add the 2 script files from the CDN into the index.html file which is React and React DOM
+5)React element is an object and while rendering using react.render() the object will convert to an element.
+6)We can inject React into any of the frame works like for examples sider bar , header and all with some imports, thats y we call it as a javascript Library.
+7)Package.json file is a configuration for NPM.
+8)NPM is a package manager
+9)Bundlers: 
+    webpack
+    parcel
+    wheat
+10)npm install -D parcel
+     -D: this tell package manager to install this particular package as a dev dependency
+11)There are 2 dependencies 
+    Dev dependencies - These will use ful while developing 
+    dependencies - This will be used in production mode
+12)Symbols before packages  
+    caret(^) - Which will upgared the minor version if in case there is any minor version update happend on the package 
+    tilde(~) -  Which will upgrade the major version directly in case there is a major version of the package released.
+13)Package.lock json
+    it is an important file which will track the exact version installed in our application and it has an integrity where it will maintain the hash to make sure we are using the same version in out local and the production.
+14)Node_Modules 
+    it is like a date base where it will hold all the code required by packages 
+15)Tentative dependencies: 
+    if u install one package and if u see in node module there will be lot of other things created along with ur package , because the package we installed has again dependencies and that dependencies again have some dependencies so that's why the node modules is Huge!.
+16)we can add node modules into git ignore as we can regenerate the dependencies using the package and package lock json so there is no need of pushing node modules into git.
+17)npx parcel index.html
+    npx command is used to execute a package where as npm is used to install a package
+18)Importing React through cdn links is not a good practice becoz every time we have to call another network to bring react so its easy when we install react and get Rect from node modules
+19)Parcel will do magic, it can do... 
+    - Dev Build
+    - Creates a local server, and host our application into server
+    - Auto Refresh when there is a change
+    - it uses HMR - hot module replacement which will track all the files which we are updating
+    - File watcher algorithm , which keeps track of all file changes which are changing realtime and tell server to reload
+    - It will remove cache and makes build faster
+    - Image optimization
+    - Minfication our file for our production Build.
+    - Bundling
+    - Compress the file and ship into production
+    - Differential Bundling - Parcel will take of bundling and gives smoother performace on web browsers where ever or any browser version u install ur application, it will give you support of older browsers
+    - Code splitting
+    - Diagnostic: Error Handling
+    - Https
+    - Tree Shaking - It will remove unused code 
+    - it will create diff builds for dev and prod
+20)Remove "main: ''" from package json as the npm gives it by default , which will throw an error while doing builds
+21)For prod build   
+    - npx parcel build index.html
+    - it will creat a build and put it in a dist folder.
+    For dev build
+    - npx parcel index.html
+    - it will creat a build and put it in a dist folder.
+22)dist: 
+    - Build folder created by parcel
+    - main files like index.html, index.js and index.css which is compressed code of all our files
+23)No need to push the files into git which can be regenerated in the server using the commands like npm i or npx parcel indx.html 
+24)Browsers List: We need to tell our application in what are all the browsers our application should support along with the version
+    - For this we need to configure this in package.json as "browserslist" : ["last 2 versions"]
+    - this details we can fetch from the browserlist.dev website
