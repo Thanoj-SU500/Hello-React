@@ -59,3 +59,46 @@
 24)Browsers List: We need to tell our application in what are all the browsers our application should support along with the version
     - For this we need to configure this in package.json as "browserslist" : ["last 2 versions"]
     - this details we can fetch from the browserlist.dev website
+25)Scripts:
+    - scripts in package.json files used to run the code using the command of 
+        -npm run start or npm start
+    - and for build
+        - npm run build
+    scripts: [
+        "start": "parcel index.html",
+        "build:"parcel build index.html"
+    ]
+26)React.createElement will create an object and ReactDom.createRoot will convert this to an html ele and this will render into DOM by using the render() method.
+27)JSX 
+    - JSX is not html in JS
+    - JSX is diff, html is diff and react is diff
+    - JSX is HTML or XML like syntax
+    - The code is traspiled before it reaches JS Engine and this will done by Parcel using Babel.
+    - JSx is converted to createElement by the end of the day by Babel
+28)Babel 
+    - Babel is a javascript converter or transpiler it takes jsx and coverts it to react code
+    - Converts the code token by token
+    - Babel will understand the elelments by finding the angular bracket "<" 
+29)If u want to give attributes to jsx it should be in camel case
+30)VS Code Extensions which will make coders life easy
+    - Prettier-code: formats the code
+    - Bracket Pair Colorization toggler : It will changes the brackets like chain brackets
+    - Eslint
+    - Better Comments
+31)React Components: 2 ways of creating components
+    - 2 types of components we have 
+        1) Class Based components
+            - Old way of writing the code
+            - uses JS classes
+        2) Functional Components 
+            - New Way of writing the code
+            - Uses JS Functions
+    - React functional components are normal JS functions which returns JSX code or React elements
+
+32)Always create components with camelcase 
+33)We can render the react component by ising root.render(<TestComponent />)
+    - this is how babel will understand this is a component as mentioned previously Babel will understand the html by <  angualr code
+
+34)Component Composition 
+    - Component composition is nothing but 2 components composed inside one another.
+35)
