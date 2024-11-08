@@ -13,7 +13,7 @@
 10)npm install -D parcel
      -D: this tell package manager to install this particular package as a dev dependency
 11)There are 2 dependencies 
-    Dev dependencies - These will use ful while developing 
+    Dev dependencies - These will be useful while developing 
     dependencies - This will be used in production mode
 12)Symbols before packages  
     caret(^) - Which will upgared the minor version if in case there is any minor version update happend on the package 
@@ -48,10 +48,10 @@
 20)Remove "main: ''" from package json as the npm gives it by default , which will throw an error while doing builds
 21)For prod build   
     - npx parcel build index.html
-    - it will creat a build and put it in a dist folder.
+    - it will create a prod build and put it in a dist folder.
     For dev build
     - npx parcel index.html
-    - it will creat a build and put it in a dist folder.
+    - it will create a build and put it in a dist folder.
 22)dist: 
     - Build folder created by parcel
     - main files like index.html, index.js and index.css which is compressed code of all our files
@@ -72,9 +72,12 @@
 27)JSX 
     - JSX is not html in JS
     - JSX is diff, html is diff and react is diff
-    - JSX is HTML or XML like syntax
+    - JSX is HTML like syntax or XML like syntax
     - The code is traspiled before it reaches JS Engine and this will done by Parcel using Babel.
     - JSx is converted to createElement by the end of the day by Babel
+    - JSX is also a mix of JS and HTML 
+     we can use {} and write js in b/w jsx
+     - JSX will take care of cross side scripting, it will sanatize 
 28)Babel 
     - Babel is a javascript converter or transpiler it takes jsx and coverts it to react code
     - Converts the code token by token
@@ -94,11 +97,43 @@
             - New Way of writing the code
             - Uses JS Functions
     - React functional components are normal JS functions which returns JSX code or React elements
-
 32)Always create components with camelcase 
-33)We can render the react component by ising root.render(<TestComponent />)
+33)We can render the react component by using root.render(<TestComponent />)
     - this is how babel will understand this is a component as mentioned previously Babel will understand the html by <  angualr code
-
 34)Component Composition 
     - Component composition is nothing but 2 components composed inside one another.
-35)
+35)we can use normal function or arrow function to execute the code, but arrow functions is the new way
+36)We can render html element also in the component using {} and keeping the element into the curley brackets, as the jsx is like mix and match with js and jsx and the react element is nothing but an obj
+37)You can call jasvascript functions components in the {} as functions 
+/////////////////////////////////EP-04/////////////////////////
+
+38)Planning For an Application 
+    - Name of your app
+    - mockup
+    - application structure 
+
+39)Basic planning for our food application component structure
+    - Header
+        - Logo component
+        - Nav bar with some links
+    - Body 
+        - Search 
+        - Resto container for restaurents
+            - Resto Card
+    - Footer
+        - copy right info and 
+        - Some Links
+        - About US
+40)Props: - Properties or passing an argumenets to a function
+    - we can pass n number of arguments and react will take it as an object
+    = (props) => {}
+    - destructuring on the fly means we can take arguments as {} inside function like =({name, age}) => {}
+
+41)Config Driven UI: 
+    - website driven by configs (data) 
+       - for example swiggy will looks like diff in places, diff offers in diff places
+42)"Key" is an important thing in React and it should be given for the elements when we are looping as it increases the application performance.
+    - If there is no key react does not know where to update the new element in case if new element added or delted and it will treat all the elements are same and it will render all the elements again.
+    - if we give a unique id , and a new ele comes also react know the existings all and it wont render the existing elements and it will render only the new one which increase the Optimization.
+43) React will never take indexes as KEYS and it wont recommend to use index as key if the order of the element changes , it may negatively impact the performance and may cause issue with the component state.
+    
