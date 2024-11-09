@@ -6,7 +6,7 @@
       "offers": "20% off on all orders",
       "deliveryTime": "30 mins",
       "rating": 4.2,
-      "image": "https://via.placeholder.com/150"
+      "image": "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     {
       "id": 2,
@@ -24,6 +24,87 @@
       "offers": "Free delivery",
       "deliveryTime": "35 mins",
       "rating": 4.5,
+      "image": "https://via.placeholder.com/152"
+    },
+    {
+      "id": 4,
+      "name": "Oven story's Pizza",
+      "price": "₹350 for two",
+      "offers": "Free delivery",
+      "deliveryTime": "35 mins",
+      "rating": 3.9,
+      "image": "https://via.placeholder.com/152"
+    },
+    {
+      "id": 5,
+      "name": "Oyala's Pizza",
+      "price": "₹300 for two",
+      "offers": "Free delivery",
+      "deliveryTime": "35 mins",
+      "rating": 3.5,
+      "image": "https://via.placeholder.com/152"
+    },
+    {
+      "id": 6,
+      "name": "Meghana Biriyani",
+      "price": "₹300 for one",
+      "offers": "Free delivery",
+      "deliveryTime": "35 mins",
+      "rating": 4.1,
+      "image": "https://via.placeholder.com/152"
+    },
+    {
+      "id": 7,
+      "name": "Krutunga",
+      "price": "₹280 for one",
+      "offers": "Free delivery",
+      "deliveryTime": "25 mins",
+      "rating": 4.0,
+      "image": "https://via.placeholder.com/152"
+    },
+    {
+      "id": 8,
+      "name": "Hyderabad spice",
+      "price": "₹260 for one",
+      "offers": "Free delivery",
+      "deliveryTime": "40 mins",
+      "rating": 4.4,
+      "image": "https://via.placeholder.com/152"
+    },
+    {
+      "id": 9,
+      "name": "Nandanas",
+      "price": "₹360 for two",
+      "offers": "Free delivery",
+      "deliveryTime": "45 mins",
+      "rating": 4.5,
+      "image": "https://via.placeholder.com/152"
+    },
+    {
+      "id": 10,
+      "name": "Zoyas Kitchen",
+      "price": "₹180 for one",
+      "offers": "Free delivery",
+      "deliveryTime": "40 mins",
+      "rating": 3.8,
+      "image": "https://via.placeholder.com/152"
+    },
+    {
+      "id": 11,
+      "name": "Biryani Zone",
+      "price": "₹300 for one",
+      "offers": "Free delivery",
+      "deliveryTime": "20 mins",
+      "rating": 4.2,
+      "image": "https://via.placeholder.com/152"
+    },
+    {
+      "id": 12,
+      "name": "Paradise",
+      "price": "₹260 for one",
+      "offers": "Free delivery",
+      "deliveryTime": "50 mins",
+      "rating": 4.0,
       "image": "https://via.placeholder.com/152"
     }
   ]

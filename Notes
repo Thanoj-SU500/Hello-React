@@ -136,4 +136,45 @@
     - If there is no key react does not know where to update the new element in case if new element added or delted and it will treat all the elements are same and it will render all the elements again.
     - if we give a unique id , and a new ele comes also react know the existings all and it wont render the existing elements and it will render only the new one which increase the Optimization.
 43) React will never take indexes as KEYS and it wont recommend to use index as key if the order of the element changes , it may negatively impact the performance and may cause issue with the component state.
-    
+
+#####################React Hooks###########################
+
+44) 2 types of Export/import
+    1) Default Export/Import
+        export default Component
+        import Component from "path"
+    2) Named Export/Import
+        export const Component
+        import { Component } from "path"
+    unless we are using 2 exports in same file its better to use the default export
+45) React hooks are normal JS utility functions which is given to us by React, the only thing is that function has some power where the logics has written in background.
+46)there are multiple hooks in react and there are 2 very important Hooks 
+    1)useState(): 
+        - This is used to give superpowerful react state variables.
+        - we have to import it from "react" and we have to import it as named import which is like 
+        import { useState } from "react"
+        - useState is used to create a state variable 
+        State Variable : 
+            - it maintain the state of your component
+        - this superpowerful variable makes UI layer sync with the data layer and this is known as Render
+        - whenever the state variable updates react rerender the components.
+        - Rerender component means whenever a state variable changes react will update the ui quickly.
+        - By using this state variable it give a power when the data layer update ui layer will be update this is done rendering.
+        - React will make DOM operations superfast 
+        - React will keep an eye on this special variable so whenever the variable update it will update the DOM 
+    2)useEffect()
+
+
+46)React Algorithim 
+    React uses Reconciliation Algorithim as also known as React Fiber(React 16) uses to update the DOM.
+
+47)Virtual DOM: 
+    It is not an actual DOM, virtual dom is an representation of actual DOM, this react virutal Dom is nothing but an object
+48)Diff Alogorithm 
+    this algorithm tries to find the diff b/w the old virtal DOM and new virtual DOM and it will calculate the diff and update the actual DOM on every render CYCLE
+    Document for React Fiber : 
+    https://github.com/acdlite/react-fiber-architecture
+49)Finding out the diff b/w 2 elements is difficult and finding diff b/w the objects is easy this is why the react is fast, bcoz react elements is nothing but an object.
+50) React is doing efficient DOM manaupulations bcoz it has some feature like 
+    - Virtual DOM 
+    - builds its own algorithm to find the diff b/w the objects and update the actual DOM using diff Algorithm  
