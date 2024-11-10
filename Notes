@@ -141,29 +141,35 @@
 
 44) 2 types of Export/import
     1) Default Export/Import
-        export default Component
-        import Component from "path"
+        "export default Component"
+        "import Component from "path"
     2) Named Export/Import
-        export const Component
-        import { Component } from "path"
+        "export const Component"
+        "import { Component } from "path""
     unless we are using 2 exports in same file its better to use the default export
-45) React hooks are normal JS utility functions which is given to us by React, the only thing is that function has some power where the logics has written in background.
-46)there are multiple hooks in react and there are 2 very important Hooks 
+45) React hooks are normal JS utility functions which is given to us by React, the only thing is that function has some power where the logics will work in background.
+46)there are multiple hooks in react and in that we have 2 very important Hooks 
     1)useState(): 
-        - This is used to give superpowerful react state variables.
-        - we have to import it from "react" and we have to import it as named import which is like 
+        - useState is used to create its own state variable 
+            State Variable : 
+                - it maintain the state of your component
+        - Whenever we will change this state variable react will rerender the component which means when state variable update , react trigger a Reconciliation cycle(rerender the component)
+        - This is used to give superpower to react state variables.
+        - we have to import it from "react" as named import which is like 
         import { useState } from "react"
-        - useState is used to create a state variable 
-        State Variable : 
-            - it maintain the state of your component
         - this superpowerful variable makes UI layer sync with the data layer and this is known as Render
         - whenever the state variable updates react rerender the components.
-        - Rerender component means whenever a state variable changes react will update the ui quickly.
-        - By using this state variable it give a power when the data layer update ui layer will be update this is done rendering.
-        - React will make DOM operations superfast 
+        - Rerender is nothing but whenever a state variable changes react will update the ui quickly.
+        - React will make DOM operations superfast.
         - React will keep an eye on this special variable so whenever the variable update it will update the DOM 
     2)useEffect()
-
+        - it will come from react libraby and import as named import
+        - it requires 2 parameters
+            1) Call back function and (()=>{})
+            2)Dependency([])
+        - this callback function will be called after our component renders
+        - First it will render the entire component and after that it will call the callback funciton
+        - So if in case we want to load anything after rendering the component we can use useEffect().
 
 46)React Algorithim 
     React uses Reconciliation Algorithim as also known as React Fiber(React 16) uses to update the DOM.
@@ -174,7 +180,78 @@
     this algorithm tries to find the diff b/w the old virtal DOM and new virtual DOM and it will calculate the diff and update the actual DOM on every render CYCLE
     Document for React Fiber : 
     https://github.com/acdlite/react-fiber-architecture
-49)Finding out the diff b/w 2 elements is difficult and finding diff b/w the objects is easy this is why the react is fast, bcoz react elements is nothing but an object.
+49)Finding out the diff b/w 2 elements is difficult, but finding the diff b/w the objects is easy this is why the react is fast, bcoz react elements is nothing but an object.
 50) React is doing efficient DOM manaupulations bcoz it has some feature like 
     - Virtual DOM 
     - builds its own algorithm to find the diff b/w the objects and update the actual DOM using diff Algorithm  
+
+
+############### EP-06 ################
+
+51) Monolith Architecture:
+    A monolithic architecture is an approach to building applications as a single consolidated unit, where ui, BE, db will be there in the same code and for even small change we have to deploy the entire applications
+52) Microservice Architecture:
+    - where it have separate service for BE , UI , Auth, DB etc.. and all these combined will make an application.
+    - Interaction of these services: 
+        ui needs BE and BE needs db like all the services dependent on each
+    - How these services are connected
+        all these services run on thier own ports and at the end all these ports mapped to domain name
+        like for examples
+            /ui:1234
+            /api:1000
+            /sms: 1355
+53) How webapps fetch data from BE 
+    - There are 2ways
+        1)as soon our page loads we can make an api call and when we will get data we will render the UI, in this case suppose the api call will take some time to get the data the page will be blank.
+        2)as soon as the page loads we will render the ui whatevere we have(Skeleton), and we will make an api call and when we get data we will rerender the data on to the web page
+    - In react we are using the second approach bcoz, it will give better UX,
+54) fetch(): 
+     - uses to fetch the date from the api and fetch opt is from browser
+     - this fetch always returns a promise 
+     - we can use async and await 
+55) Cors-policy: 
+    - Cross-Origin Resource Sharing (CORS) is a security standard that allows servers to specify, who can access their resources.
+    - the browser blocks the api call in case the origin mismatches which means when we try to access the api from one domain to another domain.
+    - Using chrome extension of Cors error we can overcome this issue
+56) Shimmer UI:
+    - a dummy screen or page loading untill the actual data comes instead of loader which gives an better UX 
+
+57) Conditional Rendering 
+    the concept of Shimmer ui is nothing but conditional rendering which means rendering some thing based on condition.
+
+######## EP-07 ################
+
+58) Deep dive into useEffect and useState
+    useEffect:
+        - useeffect will be called with 2 dependencties 
+            1)callback and the other is 
+            2)dependency array.
+            useEffect(()=> {}, [])
+        - useEffect will be called every time when component render
+        - the natural behaviour of useeffect is to called on every render of component.
+        ⭐- if there is no dependency array, useEffect will be called on every render
+        ⭐ - If the dependency array is empty [], then useEffect will be called only once on the intial render 
+        ⭐ - If Dependency array has something then whenever the data in dependecy array changes the useEffect() will be called.
+    useState(): 
+        - Always call useState hook inside the component.
+        - and try to call hooks on the top of the component
+        - never use these useState hooks inside the if conditions, functions and loops  which creates an inconsistency and it does not make any sense.
+59) Routing in react
+    - Using react-router-dom npm package for routing 
+    - Need to configure the routing in the root component
+    ⭐ createBrowserRouter: 
+    - import createBrowserRouter from the react-router-dom and use it for routing like for examples
+    const example = createBrowserRouter([
+        {
+            "path": "/",
+            "element: <Applayout/>
+        },
+                {
+            "path": "/about",
+            "element: <AboutComponent/>
+        }
+    ])
+
+    ⭐ RouterProvider: 
+    - 
+        

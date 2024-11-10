@@ -1,20 +1,30 @@
-
 const RestaurantCard = (props) => {
-    const { resData } = props;
-    return (
-      <div className="restaurant-card">
+  const { resData } = props;
+  return (
+    <div className="restaurant-card">
+      <div className="restaurant-image-container">
         <img
-          src={resData.image}
-          alt={resData.name}
+          src={
+            "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" +
+            resData?.info?.cloudinaryImageId
+          }
+          alt={resData?.info?.name}
           className="restaurant-image"
         />
-        <h2 className="restaurant-name">{resData.name}</h2>
-        <p className="restaurant-price">{resData.price}</p>
-        <p className="restaurant-offers">🤩 {resData.offers}</p>
-        <p className="restaurant-delivery">{resData.AppLayoutdeliveryTime}</p>
-        <p className="restaurant-rating">⭐ {resData.rating}</p>
       </div>
-    );
-  };
+      <h2 className="restaurant-name">{resData?.info?.name}</h2>
+      <div className="restoInfo">
+        <p className="restaurant-price">{resData?.info?.price}</p>
+        <p className="restaurant-offers">
+          🤩 {resData?.info?.aggregatedDiscountInfoV3?.header}
+        </p>
+        <p className="restaurant-delivery">
+          🛵 {resData?.info?.sla?.slaString}
+        </p>
+        <p className="restaurant-rating">⭐ {resData?.info?.avgRating}</p>
+      </div>
+    </div>
+  );
+};
 
-  export default RestaurantCard;
+export default RestaurantCard;
