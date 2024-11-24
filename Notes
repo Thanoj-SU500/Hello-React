@@ -105,6 +105,7 @@
 35)we can use normal function or arrow function to execute the code, but arrow functions is the new way
 36)We can render html element also in the component using {} and keeping the element into the curley brackets, as the jsx is like mix and match with js and jsx and the react element is nothing but an obj
 37)You can call jasvascript functions components in the {} as functions 
+
 /////////////////////////////////EP-04/////////////////////////
 
 38)Planning For an Application 
@@ -253,5 +254,6 @@
     ])
 
     ⭐ RouterProvider: 
-    - 
-        
+    - All data router objects are passed to this component to render our app.
+    - we can import it from react-router-dom along with createBrowserRouter
+    ⭐ react-router-dom gives an access to hook useRouterError, using this hook it give more information about the error.
